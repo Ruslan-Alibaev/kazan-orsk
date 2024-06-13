@@ -1,0 +1,62 @@
+// Первоначальная настройка 
+.header__top {
+    background: #9d9d9d;
+    height: 65px;
+}
+.header__top-upper {
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    max-width: 1248px;
+    margin: 0 auto;
+}
+.header__upper-left {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-start;
+}
+.header__btn-menu  {
+    border: 1px solid #252525;
+    padding: 5px;
+    cursor: pointer;
+}
+.header__upper-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.header__btn-name {
+    font-size: 14px;
+    color: #252525;
+    opacity: 0.5;
+}
+.header__upper-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+.header__btn-call {
+    padding: 5px;
+    border: 1px solid #252525;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.header__btn-connection  {
+    padding: 0 15px;
+    height: 26px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #252525;
+    font-size: 14px;
+}

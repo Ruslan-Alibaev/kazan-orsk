@@ -1,0 +1,13 @@
+@charset "UTF-8";
+/* Регистрация файла шрифтов */
+/* @font-face {
+    font-family: 'Gogono Cocoa Mochi Cyrillic', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    src: url('https://sporte.co/sporteco2/wp-content/themes/sporteco/assets/fonts/Gogoa/gogono-cocoa-mochi-cyrillic.otf') format("opentype");
+
+} */
+body {
+  font-family: var(--font-pl);
+  background: var(--bg-color);
+}
