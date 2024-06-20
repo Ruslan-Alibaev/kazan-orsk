@@ -1,0 +1,21 @@
+name: Deploy to Hosting
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Deploy to Hosting
+        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+        with:
+          server: ${{ server107.hosting.reg.ru }}
+          username: ${{ u2703095_ruslan }}
+          password: ${{ iK6tW7hP3fjI1zZ5 }}
+          server-dir:  ${{ /www/kazan-orsk.ru}}
