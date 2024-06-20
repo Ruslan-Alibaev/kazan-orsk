@@ -76,7 +76,7 @@
                     <div class="header__bottom-inner">
 
                         <div class="header__bottom-text">
-                            <p class="header__bottom-subtitle">Поездки по маршруту:</p>
+                            <!-- <p class="header__bottom-subtitle">Поездки по маршруту:</p> -->
                             <h1 class="header__bottom-title default-title">Казань - Оренбург - Орск</h1>
                             <p class="header__bottom-descr">ЕЖЕДНЕВНЫЕ РЕЙСЫ!</p>
                         </div>
