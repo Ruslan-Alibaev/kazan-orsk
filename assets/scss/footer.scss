@@ -1,7 +1,9 @@
 
 .footer {
-    background: #9d9d9d;
-    height: 80px;
+    
+    height: 90px;
+    border-top: 2px solid #666;
+    background: #d9d9d9
 }
 
 .footer__inner {
@@ -11,8 +13,95 @@
     align-items: center;
     height: 100%;
 }
-.footer__logo {
-    height: 50px;
-    width: 50px;
-    background: #E2E2E2;
+.footer__logo img {
+    width: 90px;
+}
+
+.footer__center {
+    display: flex;
+    gap: 15px;
+
+    a {
+        color: #666;
+        font-size: 16px;
+        cursor: pointer;
+        border: 2px solid #666;
+        border-radius: 10px;
+        padding: 5px 15px;
+        transition: all ease-in-out 0.3s;
+
+        &:hover {
+            transform: scale(0.98);
+            opacity: 60%;
+        }
+    }
+}
+
+.footer__right {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+.footer__social {
+    display: flex;
+    gap: 10px;
+}
+.footer__whatsapp,
+.footer__tg,
+.footer__vk {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  transition: all ease-in-out 0.3s;
+
+  &:hover {
+    transform: scale(0.98);
+    opacity: 60%;
+}
+}
+.footer__whatsapp::before {
+  content: "\ea93";
+  font-size: 25px;
+  font-family: "icomoon";
+  position: absolute;
+  color: #666;
+}
+.footer__tg::before {
+  content: "\e90b";
+  color: #666;
+  font-size: 25px;
+  font-family: "icomoon";
+  position: absolute;
+}
+.footer__vk::before {
+  content: "\e90a";
+  font-size: 25px;
+  font-family: "icomoon";
+  position: absolute;
+  color: #666;
+}
+.footer__policy {
+    color: #666;
+        font-size: 16px;
+        cursor: pointer;
+    transition: all ease-in-out 0.3s;
+
+        &:hover {
+            transform: scale(0.98);
+            opacity: 60%;
+        }
+}
+
+@media (max-width: 480px) {
+    .footer__logo img {
+        width: 65px;
+    }
+    .footer__whatsapp::before,
+    .footer__tg::before {
+        font-size: 20px;
+    }
+    .footer__policy {
+        font-size: 14px;
+    }
 }

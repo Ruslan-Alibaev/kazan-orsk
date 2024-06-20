@@ -1,6 +1,17 @@
+.header {
+  background: url(../img/bg6.jpg) center no-repeat;
+  background-size: cover;
+  height: 100vh;
+  padding: 0 25px;
+}
+
 .header__top {
-  background: #9d9d9d;
-  height: 65px;
+  height: 90px;
+  border-bottom: 2px solid rgba(255, 249, 249, 0.35);
+}
+
+.header__upper-top {
+  display: none;
 }
 
 .header__top-upper {
@@ -21,23 +32,69 @@
   justify-content: flex-start;
 }
 
+.header__upper-left-icon {
+  width: 90px;
+}
+
+.header__upper-left-text {
+  color: rgba(255, 249, 249, 0.85);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 20px;
+}
+
 .header__btn-menu {
   border: 1px solid #252525;
   padding: 5px;
   cursor: pointer;
+  display: none;
 }
 
 .header__upper-center {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 20px;
 }
 
-.header__btn-name {
-  font-size: 14px;
-  color: #252525;
-  opacity: 0.5;
+.header__whatsapp,
+.header__tg,
+.header__vk {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  transition: all ease-in-out 0.3s;
+}
+.header__whatsapp:hover,
+.header__tg:hover,
+.header__vk:hover {
+  transform: scale(0.98);
+  opacity: 60%;
+}
+
+.header__whatsapp::before {
+  content: "\ea93";
+  font-size: 30px;
+  font-family: "icomoon";
+  position: absolute;
+  color: rgba(255, 249, 249, 0.85);
+}
+
+.header__tg::before {
+  content: "\e90b";
+  color: rgba(255, 249, 249, 0.85);
+  font-size: 30px;
+  font-family: "icomoon";
+  position: absolute;
+}
+
+.header__vk::before {
+  content: "\e90a";
+  font-size: 30px;
+  font-family: "icomoon";
+  position: absolute;
+  color: rgba(255, 249, 249, 0.85);
 }
 
 .header__upper-right {
@@ -45,25 +102,99 @@
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
+}
+
+.header__upper-right-tel {
+  display: flex;
+  flex-direction: column;
   gap: 10px;
+  font-variant-numeric: lining-nums;
+}
+.header__upper-right-tel a {
+  font-size: 18px;
+  color: rgba(255, 249, 249, 0.85);
+  cursor: pointer;
+  transition: all ease-in-out 0.3s;
+}
+.header__upper-right-tel a:hover {
+  transform: scale(0.98);
+  opacity: 60%;
 }
 
-.header__btn-call {
-  padding: 5px;
-  border: 1px solid #252525;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+@media (max-width: 850px) {
+  .header__top-upper {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .header__upper-left {
+    grid-column: 1/3;
+  }
+  .header__upper-left-icon {
+    width: 55px;
+  }
+  .header__upper-left-text p,
+  .header__upper-right-tel a {
+    font-size: 16px;
+  }
+  .header__whatsapp, .header__tg {
+    width: 25px;
+    height: 25px;
+  }
+  .header__whatsapp::before,
+  .header__tg::before {
+    font-size: 25px;
+  }
 }
-
-.header__btn-connection {
-  padding: 0 15px;
-  height: 26px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid #252525;
-  font-size: 14px;
+@media (max-width: 580px) {
+  .header__upper-center,
+  .header__upper-right {
+    display: none;
+  }
+  .header__upper-left {
+    grid-column: 1/5;
+    justify-content: center;
+    gap: 25px;
+  }
+  .header__upper-top {
+    display: flex;
+    padding-top: 20px;
+    justify-content: space-between;
+  }
+  .header__upper-top .header__whatsapp, .header__upper-top .header__tg {
+    color: rgba(255, 249, 249, 0.85);
+    border-radius: 10px;
+    border: 2px solid rgba(255, 249, 249, 0.85);
+    padding: 4px 10px;
+    padding-left: 45px;
+    font-weight: 500;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+  }
+  .header__upper-top .header__whatsapp::before, .header__upper-top .header__tg::before {
+    left: 10px;
+  }
+  .header__upper-top .header__upper-center, .header__upper-top .header__upper-right {
+    display: flex;
+  }
+  .header__upper-top .header__upper-left-icon {
+    width: 70px;
+  }
+}
+@media (max-width: 380px) {
+  .header__whatsapp, .header__tg {
+    width: 20px;
+    height: 20px;
+  }
+  .header__upper-top .header__whatsapp::before, .header__upper-top .header__tg::before {
+    left: 5px;
+  }
+  .header__upper-top .header__whatsapp, .header__upper-top .header__tg {
+    padding-left: 30px;
+  }
+  .header__whatsapp::before, .header__tg::before {
+    font-size: 20px;
+  }
+  .header__upper-center {
+    gap: 10px;
+  }
 }

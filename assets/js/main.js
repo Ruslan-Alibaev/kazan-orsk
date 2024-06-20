@@ -230,3 +230,71 @@ function copyText(elem) {
   }, 1500);
 }
 */
+
+
+// Выбираем все элементы с классом 'routes__variant' и добавляем им обработчик события 'click'
+document.querySelectorAll('.routes__descr').forEach((el) => {
+  el.addEventListener('click', function () {
+    // Проверяем, если текущий элемент уже активен
+    if (this.classList.contains('active')) {
+      // Если да, ничего не делаем
+    } else {
+      // Удаляем класс 'active' у всех элементов
+      document.querySelectorAll('.routes__descr').forEach((b) => b.classList.remove('active'));
+      
+      // Добавляем класс 'active' к текущему элементу
+      this.classList.add('active');
+      
+      // Проверяем, если текущий элемент имеет класс 'variant1'
+      if (this.classList.contains('variant1')) {
+        // Меняем атрибут 'src' у элемента с классом 'routes__variant-right-map' для 'variant1'
+        document.querySelector('.routes__variant-right-map').setAttribute(
+          'src',
+          'https://yandex.ru/map-widget/v1/?um=constructor%3A80e08e368853cfabc9b2bb6a82a93a2ac6661afb19bcedc3a125949411512826&amp;source=constructor'
+        );
+        
+        // Меняем текстовое содержимое элемента с классом 'routes__variants-descr' для 'variant1'
+        document.querySelector('.routes__variants-descr').textContent = "Казань - Бавлы - Альметьевск - Оренбург - Орск";
+      }
+
+      // Проверяем, если текущий элемент имеет класс 'variant2'
+      if (this.classList.contains('variant2')) {
+        // Меняем атрибут 'src' у элемента с классом 'routes__variant-right-map' для 'variant2'
+        document.querySelector('.routes__variant-right-map').setAttribute(
+          'src',
+          'https://yandex.ru/map-widget/v1/?um=constructor%3Adca7c06f730925db7113ecaa04058f1acbe3cef85202c8010ce5e5b4ac644e34&amp;source=constructor'
+          
+        );
+        
+        // Меняем текстовое содержимое элемента с классом 'routes__variants-descr' для 'variant2'
+        document.querySelector('.routes__variants-descr').textContent = "Орск - Оренбург - Шарлык - Альметьевск - Казань";
+      }
+
+
+      if (this.classList.contains('variant3')) {
+        // Меняем атрибут 'src' у элемента с классом 'routes__variant-right-map' для 'variant2'
+        document.querySelector('.routes__variant-right-map').setAttribute(
+          'src',
+          'https://yandex.ru/map-widget/v1/?um=constructor%3A0332b2ec34f356d0b50901247a50ef76dd2d83f5882989352934c893c5a6c2fb&amp;source=constructor'
+         
+        );
+        
+        // Меняем текстовое содержимое элемента с классом 'routes__variants-descr' для 'variant2'
+        document.querySelector('.routes__variants-descr').textContent = "Казань - Альметьевск - Шарлык - Оренбург";
+      }
+
+
+      if (this.classList.contains('variant4')) {
+        // Меняем атрибут 'src' у элемента с классом 'routes__variant-right-map' для 'variant2'
+        document.querySelector('.routes__variant-right-map').setAttribute(
+          'src',
+          'https://yandex.ru/map-widget/v1/?um=constructor%3A6a6b7a7540871f0f01c33437d3a3ee9d832cd26497e5730e7c1922b143fe9cda&amp;source=constructor'
+          
+        );
+        
+        // Меняем текстовое содержимое элемента с классом 'routes__variants-descr' для 'variant2'
+        document.querySelector('.routes__variants-descr').textContent = "Оренбург - Шарлык - Альметьевск - Казань";
+      }
+    }
+  });
+});

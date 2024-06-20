@@ -2,11 +2,21 @@
     <div class="container">
         <div class="footer__inner">
             <div class="footer__logo">
-                <a href="<?php echo get_permalink(6); ?>">
-                    <img src="<?php bloginfo('template_url'); ?>/assets/img/footer-logo.png" alt="">
-                </a>
+                <img src="<?php bloginfo('template_url'); ?>/assets/img/bus.png" alt="Перевозки Орск Казань">
             </div>
-            <a href="#">Политика конфиденциальности </a>
+            <!-- <div class="footer__center">
+                <a href="#about">О нас</a>
+                <a href="#price">Стоимость</a>
+                <a href="#variants">Маршруты</a>
+            </div> -->
+            <div class="footer__right">
+                <div class="footer__social">
+                    <a href="https://wa.me/+79096116116" class="footer__whatsapp"></a>
+                    <a href="https://t.me/@orskkazan" class="footer__tg"></a>                    
+                </div>                
+            </div>
+            <a class="footer__policy" href="https://kazan-orsk.ru/policy">Политика конфиденциальности </a>
+
         </div>
     </div>
 
@@ -75,6 +85,21 @@
 
 
 </body>
+
+<div id="popup__order" class="popup__block" style="display: none">
+    <section class="form__section" id="form-section">
+        <div class="container">
+            <div class="form__inner">
+                <div class="form__block">
+                    <div class="form__block-inner">
+                        <div class="form__block-title default-title center-title">Отправьте заявку и мы перезвоним вам в ближайшее время</div>
+                        <?php echo do_shortcode('[contact-form-7 id="12ef1a8" title="Получить консультацию на ПРОГНОЗ"]') ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
 
 <?php wp_footer(); ?>
 

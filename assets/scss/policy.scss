@@ -1,0 +1,44 @@
+
+@mixin default-descr {
+    max-width: 90%;
+    color: rgba(37, 37, 37, 0.5);
+    font-size: clamp(0.875rem, 0.857rem + 0.09vw, 1rem);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+}
+@mixin default-title {
+    color: #252525;
+    font-size: clamp(1.75rem, 1.554rem + 0.98vw, 3.125rem);
+    font-style: normal;
+    font-weight: 600;
+    line-height: clamp(2.125rem, 1.893rem + 1.16vw, 3.75rem);
+}
+
+.privacy__section {
+    padding-top: 50px;
+    margin-top: 0px !important;
+  }
+
+p {
+    @include default-descr();
+    margin-bottom: 15px;
+    margin-left: 25px;
+
+    a {
+        color: rgb(62, 122, 195);
+        text-decoration: underline;
+    }
+}
+
+h2 {
+    @include default-descr();
+    font-weight: 600;
+    margin-top: 25px;
+margin-bottom: 15px;
+color: #252525
+}
+h1 {
+    @include default-title();
+    margin-bottom: 35px;
+}

@@ -9,41 +9,90 @@
 </head>
 
 <body>
-    <nav class="menu-mob" id="menu">
+    <!-- <nav class="menu-mob" id="menu">
         <div class="menu-mob__close-btn magic-hover magic-hover__square">
             <i class="menu-mob__close icon-x"></i>
         </div>
         <ul>
             <div class="menu-mob__title">Меню</div>
             <ul class="menu-mob__list">
-                <li><a href="<?php echo get_permalink(10); ?>">Главная</a></li>
-                <li><a href="<?php echo get_permalink(10); ?>">Пример</a></li>
+                <li><a href="">О нас</a></li>
+                <li><a href="">Маршруты</a></li>
+                <li><a href="">Стоимость</a></li>
+
             </ul>
             <a data-fancybox data-src="#popup__form" class="header__mob-btn magic-hover magic-hover__square">связаться</a>
         </ul>
-    </nav>
+    </nav> -->
     <main class="slideout-panel" id="panel">
         <header class="header">
+            <div class="header__upper-top">
+                <div class="header__upper-center header__logo">
+                    <a href="https://wa.me/+79096116116" class="header__whatsapp">Чат</a>
+                    <a href="https://t.me/@orskkazan" class="header__tg">Чат</a>
+
+                </div>
+
+                <div class="header__upper-right">
+                    <div class="header__btn-menu magic-hover magic-hover__square">
+                        <i class="icon-menu1"></i>
+                    </div>
+                    <div class="header__upper-right-tel">
+                        <a href="tel:+79096116116">+7(909)-6-116-116</a>
+                    </div>
+                </div>
+            </div>
+
             <div class="header__top">
                 <div class="header__inner">
                     <div class="header__top-upper">
                         <div class="header__upper-left">
+                            <img class="header__upper-left-icon" src="<?php bloginfo('template_url'); ?>/assets/img/bus.png">
+                            <div class="header__upper-left-text">
+                                <p>Пассажирские перевозки</p>
+                                <p>г.Казань - г.Орск</p>
+                            </div>
+                        </div>
+
+                        <div class="header__upper-center header__logo">
+                            <a href="https://wa.me/+79096116116" class="header__whatsapp"></a>
+                            <a href="http://t.me/@orskkazan" class="header__tg"></a>
+
+                        </div>
+
+                        <div class="header__upper-right">
                             <div class="header__btn-menu magic-hover magic-hover__square">
                                 <i class="icon-menu1"></i>
                             </div>
-                            <div class="header__btn-name">Меню</div>
+                            <div class="header__upper-right-tel">
+                                <a href="tel:+79096116116">+7(909)-6-116-116</a>
+                            </div>
                         </div>
-                        <div class="header__upper-center header__logo">
-                            <a href="<?php echo get_permalink(7); ?>">
-                                <div class="header__logo-text">Название сайта</div>
-                            </a>
+                    </div>
+                </div>
+            </div>
+            <div class="header__bottom">
+                <div class="container">
+                    <div class="header__bottom-inner">
+
+                        <div class="header__bottom-text">
+                            <p class="header__bottom-subtitle">Поездки по маршруту:</p>
+                            <h1 class="header__bottom-title default-title">Казань - Оренбург - Орск</h1>
+                            <p class="header__bottom-descr">ЕЖЕДНЕВНЫЕ РЕЙСЫ!</p>
                         </div>
-                        <div class="header__upper-right">
-                            <a href="" data-fancybox data-src="#popup__call" class="header__btn-call magic-hover magic-hover__square">
-                                <i class="header__btn-call-icon icon-phone"></i>
-                            </a>
-                            <a href="" class="header__btn-connection magic-hover magic-hover__square" data-fancybox data-src="#popup__form">оставить заявку</a>
+
+                        <div class="header__bottom-city">
+                            <div class="city__left">Оренбург</div>
+                            <div class="city__center">
+                                <p class="city__center-top">Казань</p>
+                                <img class="city__center-center" src="<?php bloginfo('template_url'); ?>/assets/img/arrow.png">
+                                <p class="city__center-bottom">Орск</p>
+                            </div>
+                            <p class="city__right">Оренбург</p>
                         </div>
+
+                        <a href="#price" class="header__bottom-link">Выбрать маршрут</a>
+
                     </div>
                 </div>
             </div>
